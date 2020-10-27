@@ -1,9 +1,14 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
+import ColorCounter from '../components/ColorCounter';
 
 export default function SquareScreen() {
   return (
-    <Text>Square Screen</Text>
+    <View>
+      <ColorCounter color="Red" />
+      <ColorCounter color="Blue" />
+      <ColorCounter color="Green" />
+    </View>
   );
 }
 
