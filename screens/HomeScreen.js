@@ -41,6 +41,12 @@ export default function HomeScreen({ navigation }) {
           onPress={() => navigation.navigate('Square')}
         />
       </View>
+      <View style={styles.btn}>
+        <Button
+          title="Go to Text Input Demo"
+          onPress={() => navigation.navigate('Text')}
+        />
+      </View>
     </View>
   );
 }
