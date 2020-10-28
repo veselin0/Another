@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Button, FlatList } from 'react-native';
+import { View, StyleSheet, Button, FlatList, Dimensions } from 'react-native';
 
 export default function ColorScreen() {
   const [colors, setColors] = useState([]);
@@ -15,6 +15,7 @@ export default function ColorScreen() {
       <FlatList
         keyExtractor={(item) => item}
         data={colors}
+        numColumns={4}
         renderItem={({ item }) => {
           return (
             <View
@@ -40,10 +41,12 @@ const randomRgb = () => {
   return `rgb(${red}, ${green}, ${blue})`;
 };
 
+const SCREEN_WIDTH = Dimensions.get('screen').width;
+
 const styles = StyleSheet.create({
   colorBox: {
-    height: 100,
-    width: 100,
-    marginVertical: 12,
+    height: SCREEN_WIDTH / 4,
+    width: SCREEN_WIDTH / 4,
+    marginVertical: 0,
   },
 });
