@@ -26,7 +26,7 @@ export default function CounterScreen() {
         />
       </View>
       <View style={styles.space}>
-        <Text>Current Count:{counter}</Text>
+        <Text style={styles.text}>Current Count:{counter}</Text>
       </View>
     </View>
   );
@@ -35,5 +35,8 @@ export default function CounterScreen() {
 const styles = StyleSheet.create({
   space: {
     marginVertical: 12,
+  },
+  text: {
+    fontSize: 30,
   },
 });

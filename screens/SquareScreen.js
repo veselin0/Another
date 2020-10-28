@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import ColorCounter from '../components/ColorCounter';
 
-const COLOR_INCREMENT = 15;
+const COLOR_INCREMENT = 25;
 
 const reducer = (state, action) => {
   // state === { red: number, green: number, blue: number }
