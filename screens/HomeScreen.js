@@ -47,6 +47,12 @@ export default function HomeScreen({ navigation }) {
           onPress={() => navigation.navigate('Text')}
         />
       </View>
+      <View style={styles.btn}>
+        <Button
+          title="Go to Box Demo"
+          onPress={() => navigation.navigate('Box')}
+        />
+      </View>
     </View>
   );
 }
@@ -56,6 +62,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   btn: {
-    marginVertical: 20,
+    marginVertical: 10,
   },
 });
