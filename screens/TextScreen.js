@@ -12,10 +12,16 @@ export default function TextScreen() {
         autoCapitalize="none"
         autoCorrect={false}
         value={password}
-        onChangeText={(newValue) => setPassword(newValue) }
+        onChangeText={(newValue) => setPassword(newValue)}
       />
-      <Text>Password must be longer than 5 characters</Text>
-      {password === 'gotcha' ? <Text>Access Granted!</Text> : <Text>Wrong! Try again!</Text>  }
+      {password.length < 5 ? (
+        <Text>Password must be longer than 5 characters</Text>
+      ) : null}
+      {password === 'gotcha' ? (
+        <Text>Access Granted!</Text>
+      ) : (
+        <Text>Wrong! Try again!</Text>
+      )}
     </View>
   );
 }
